@@ -6,7 +6,7 @@ def gitUrl = 'https://github.com/Aevi-UK/pos-flow-sdk-constants.git'
 
 // Create the pom configuration:
 def pomConfig = {
-    name 'POSFlowSDK'
+    name 'POSFlowSDKConstants'
     url siteUrl
     licenses {
         license {
@@ -46,7 +46,7 @@ bintray {
         dryRun = false
         publish = true
         repo = 'aevi-uk'
-        name = 'pos-flow-sdk'
+        name = 'pos-flow-sdk-constants'
         userOrg = 'aevi'
         licenses = ['Apache-2.0']
         labels = ['payment', 'POS', 'flow', 'android']
