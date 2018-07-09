@@ -3,12 +3,11 @@ apply plugin: 'java-library'
 group = 'com.aevi.sdk.flow'
 version = "${apiVersion}"
 
-apply from: '../publish-repo.gradle'
-
 javadoc {
     enabled = false
 }
 
+apply from: '../jar-publisher.gradle'
 apply from: '../bintray.gradle'
 
 sourceCompatibility = "1.7"
