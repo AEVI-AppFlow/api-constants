@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+
+group = 'com.aevi.sdk.flow'
+version = "${apiVersion}"
+
+javadoc {
+    enabled = false
+}
+
+apply from: '../jar-publisher.gradle'
+apply from: '../bintray.gradle'
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
