@@ -20,6 +20,7 @@ public interface AdditionalDataKeys {
     String DATA_KEY_BASKET = "basket";
     String DATA_KEY_CUSTOMER = "customer";
     String DATA_KEY_TOKEN = "token";
+    String DATA_KEY_LOYALTY = "loyalty";
 
     String DATA_KEY_TRANSACTION_ID = "transactionId";
     String DATA_KEY_TRANSACTION_RESPONSE = "transactionResponse";
