@@ -36,4 +36,5 @@ public interface AdditionalDataKeys {
 
     String LEGACY_POST_AUTH_TIPPING = "postAuthTipping";
     String LEGACY_PRINT_DATA = "legacyPrintData";
+    String LEGACY_TRANSACTION_TYPES = "legacyTransactionTypes";
 }
