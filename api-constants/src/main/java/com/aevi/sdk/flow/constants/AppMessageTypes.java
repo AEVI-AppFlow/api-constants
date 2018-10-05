@@ -14,9 +14,18 @@
 
 package com.aevi.sdk.flow.constants;
 
-public interface ServiceInfoDataKeys {
-    String MERCHANTS = "merchants";
-    String SUPPORTS_MANUAL_ENTRY = "supportsManualEntry";
-    String PRINTS_RECEIPTS = "printsReceipts";
-    String REQUIRES_CARD_TOKEN = "requiresCardToken";
+/**
+ * Collection of message types used for communication between FPS and various apps.
+ */
+public interface AppMessageTypes {
+
+    String REQUEST_MESSAGE = "request";
+    String PAYMENT_MESSAGE = "payment";
+    String RESPONSE_MESSAGE = "response";
+    String FLOW_SERVICE_INFO_REQUEST = "flowServiceInfoRequest";
+    String PAYMENT_FLOW_CONFIG_REQUEST = "paymentFlowConfigRequest";
+    String DEVICE_INFO_REQUEST = "deviceInfoRequest";
+    String FAILURE_MESSAGE = "failure";
+    String FORCE_FINISH_MESSAGE = "forceFinish";
+    String REQUEST_ACK_MESSAGE = "requestAck";
 }
