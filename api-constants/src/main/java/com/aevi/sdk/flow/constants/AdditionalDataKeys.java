@@ -17,8 +17,6 @@ package com.aevi.sdk.flow.constants;
 // General data keys
 public interface AdditionalDataKeys {
 
-    String DATA_KEY_BASKET = "basket";
-    String DATA_KEY_CUSTOMER = "customer";
     String DATA_KEY_TOKEN = "token";
     String DATA_KEY_LOYALTY = "loyalty";
 
