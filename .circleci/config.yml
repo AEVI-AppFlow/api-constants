@@ -1,0 +1,72 @@
+version: 2
+
+generic:
+  - &job_config
+    docker:
+      - image: circleci/openjdk:8-jdk-browsers
+    working_directory: ~/repo
+    environment:
+      _JAVA_OPTIONS: "-Xms516m -Xmx1024m"
+      GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.parallel=false
+
+  - &attach_workspace
+    attach_workspace:
+      at: ~/
+
+reusable-steps:
+  - &setup_aws_cli
+    run:
+      name: Setup AWS CLI
+      command: sudo pip install awscli
+  - &gradle_props
+    run:
+      name: Write gradle.properties
+      command: /bin/bash writegradleprops.sh
+
+  - &build
+    run:
+      name: Build
+      command: ./gradlew jar
+
+  - &persist
+    persist_to_workspace:
+      root: ~/
+      paths:
+        - repo
+        - .gradle
+
+  - &publish_to_release
+    run:
+      name: Publish to Bintray
+      command: ./gradlew jar bintrayUpload
+
+
+jobs:
+  build:
+    <<: *job_config
+    steps:
+      - checkout
+      - *gradle_props
+      - *build
+      - *persist
+
+  deploy-release:
+    <<: *job_config
+    steps:
+      - checkout
+      - *gradle_props
+      - *build
+      - *publish_to_release
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy-release:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+

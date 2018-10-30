@@ -14,7 +14,9 @@
 
 package com.aevi.sdk.flow.constants;
 
-
+/**
+ * Receipt data keys for receipt related requests.
+ */
 public interface ReceiptKeys {
 
     String RECEIPT_PAYMENT_METHOD = "receiptPaymentMethod";

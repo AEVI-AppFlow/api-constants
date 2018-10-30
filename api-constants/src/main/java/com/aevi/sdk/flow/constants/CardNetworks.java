@@ -14,7 +14,9 @@
 
 package com.aevi.sdk.flow.constants;
 
-
+/**
+ * Card networks, also known as schemes.
+ */
 public interface CardNetworks {
 
     String CARD_NETWORK_MASTERCARD = "mastercard";

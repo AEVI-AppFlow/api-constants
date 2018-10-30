@@ -14,7 +14,9 @@
 
 package com.aevi.sdk.flow.constants;
 
-
+/**
+ * Identifiers to use for adding additional amounts.
+ */
 public interface AmountIdentifiers {
 
     String AMOUNT_TIP = "tip";

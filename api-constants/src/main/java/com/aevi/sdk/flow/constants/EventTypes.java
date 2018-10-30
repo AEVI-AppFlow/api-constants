@@ -14,6 +14,9 @@
 
 package com.aevi.sdk.flow.constants;
 
+/**
+ * The main FPS event types.
+ */
 public interface EventTypes {
 
     /**

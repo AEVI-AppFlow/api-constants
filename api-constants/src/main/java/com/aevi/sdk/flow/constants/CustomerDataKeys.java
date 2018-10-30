@@ -14,7 +14,9 @@
 
 package com.aevi.sdk.flow.constants;
 
-
+/**
+ * Data keys for customer additional details.
+ */
 public interface CustomerDataKeys {
 
     String FIRST_NAME = "firstName";
