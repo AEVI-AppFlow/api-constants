@@ -19,7 +19,7 @@ package com.aevi.sdk.flow.constants;
  */
 public interface LoyaltyDataKeys {
 
-    String LOYALTY_LOYALTY_SCHEME_NAME = "schemeName";
+    String LOYALTY_SCHEME_NAME = "schemeName";
     String LOYALTY_REWARDS_PROCESSED = "rewardsProcessed";
     String LOYALTY_REWARD_MESSAGE = "rewardMessage";
     String LOYALTY_TOTAL_POINTS = "totalPoints";
