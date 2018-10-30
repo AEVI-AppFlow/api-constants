@@ -14,21 +14,16 @@
 
 package com.aevi.sdk.flow.constants;
 
-
+/**
+ * Keys for additional information about cards.
+ */
 public interface CardDataKeys {
 
-    String CARD_ENTRY_METHODS = "cardEntryMethods"; // insert, tap, swipe, manual
-    String CARD_NETWORKS = "cardNetworks"; // VISA, AMEX, MAESTRO, etc
-    String ACCOUNT_TYPES = "accountTypes"; // credit, debit, etc
-
-    String NETWORK = "network";
-    String ENTRY_METHOD = "entryMethod";
-    String ACCOUNT_TYPE = "accountType";
-    String AID = "aid";
-    String SERVICE_CODE = "serviceCode";
-    String CVV = "cvv";
-    String LANGUAGES = "languages";
-
-    String CURRENCY_CHANGE_ALLOWED = "currencyChangeAllowed";
-    String AMOUNT_CHANGE_ALLOWED = "amountChangeAllowed";
+    String CARD_DATA_NETWORK = "network";
+    String CARD_DATA_ENTRY_METHOD = "entryMethod";
+    String CARD_DATA_ACCOUNT_TYPE = "accountType";
+    String CARD_DATA_AID = "aid";
+    String CARD_DATA_SERVICE_CODE = "serviceCode";
+    String CARD_DATA_CVV = "cvv";
+    String CARD_DATA_LANGUAGES = "languages";
 }

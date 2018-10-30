@@ -14,7 +14,9 @@
 
 package com.aevi.sdk.flow.constants;
 
-
+/**
+ * Account type definitions representing possible account type choices for a payment card transaction.
+ */
 public interface AccountTypes {
 
     String ACCOUNT_TYPE_CREDIT = "credit";

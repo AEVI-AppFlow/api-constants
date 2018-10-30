@@ -14,14 +14,18 @@
 
 package com.aevi.sdk.flow.constants;
 
+/**
+ * Keys related to loyalty information.
+ */
 public interface LoyaltyDataKeys {
-    String SCHEME_NAME = "schemeName";
-    String REWARDS_PROCESSED = "rewardsProcessed";
-    String REWARD_MESSAGE = "rewardMessage";
-    String TOTAL_POINTS = "totalPoints";
-    String TOTAL_VALUE = "totalValue";
-    String EARN_POINTS = "earnPoints";
-    String EARN_VALUE = "earnValue";
-    String REDEEM_POINTS = "redeemPoints";
-    String REDEEM_VALUE = "redeemValue";
+
+    String LOYALTY_LOYALTY_SCHEME_NAME = "schemeName";
+    String LOYALTY_REWARDS_PROCESSED = "rewardsProcessed";
+    String LOYALTY_REWARD_MESSAGE = "rewardMessage";
+    String LOYALTY_TOTAL_POINTS = "totalPoints";
+    String LOYALTY_TOTAL_VALUE = "totalValue";
+    String LOYALTY_EARN_POINTS = "earnPoints";
+    String LOYALTY_EARN_VALUE = "earnValue";
+    String LOYALTY_REDEEM_POINTS = "redeemPoints";
+    String LOYALTY_REDEEM_VALUE = "redeemValue";
 }

@@ -14,7 +14,9 @@
 
 package com.aevi.sdk.flow.constants;
 
-
+/**
+ * The standard set of card presentation methods.
+ */
 public interface CardEntryMethods {
 
     String CARD_ENTRY_METHOD_INSERT = "insert";

@@ -14,6 +14,9 @@
 
 package com.aevi.sdk.flow.constants;
 
+/**
+ * Flow types, used to define flow configurations and to initiate flows with a given type.
+ */
 public interface FlowTypes {
 
     String FLOW_TYPE_SALE = "sale";
@@ -28,5 +31,4 @@ public interface FlowTypes {
     String FLOW_TYPE_BATCH_CLOSURE = "batchClosure";
     String FLOW_TYPE_CASH_RECEIPT_DELIVERY = "cashReceiptDelivery";
     String FLOW_TYPE_RECEIPT_REDELIVERY = "receiptRedelivery";
-    String FLOW_TYPE_RESPONSE_REDELIVERY = "responseRedelivery";
 }

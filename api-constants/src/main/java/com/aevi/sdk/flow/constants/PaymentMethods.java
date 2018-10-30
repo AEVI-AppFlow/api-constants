@@ -14,19 +14,18 @@
 
 package com.aevi.sdk.flow.constants;
 
-
+/**
+ * Defined methods of payment.
+ */
 public interface PaymentMethods {
 
-    String CARD = "card";
-    String CASH = "cash";
-    String LOYALTY_POINTS = "points";
-    String REWARD = "reward";
-    String GIFT_CARD = "giftCard";
-    String BANK_TRANSFER = "bankTransfer";
-    String CHEQUE = "cheque";
-    String EBT = "ebt";
-    String GIFT = "gift";
-    String PAYPAL = "paypal";
-    String AMAZON_PAY = "amazonPay";
-    String CRYPTOCOIN = "cryptocoin";
+    String PAYMENT_METHOD_CARD = "card";
+    String PAYMENT_METHOD_CASH = "cash";
+    String PAYMENT_METHOD_LOYALTY_POINTS = "points";
+    String PAYMENT_METHOD_REWARD = "reward";
+    String PAYMENT_METHOD_GIFT_CARD = "giftCard";
+    String PAYMENT_METHOD_BANK_TRANSFER = "bankTransfer";
+    String PAYMENT_METHOD_CHEQUE = "cheque";
+    String PAYMENT_METHOD_EBT = "ebt";
+    String PAYMENT_METHOD_GIFT = "gift";
 }

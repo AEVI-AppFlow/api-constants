@@ -14,6 +14,9 @@
 
 package com.aevi.sdk.flow.constants;
 
+/**
+ * Keys for different event flags.
+ */
 public interface EventDataKeys {
 
     /**

@@ -14,7 +14,11 @@
 
 package com.aevi.sdk.flow.constants;
 
+/**
+ * Keys for additional flow service info.
+ */
 public interface ServiceInfoDataKeys {
+
     String MERCHANTS = "merchants";
     String SUPPORTS_MANUAL_ENTRY = "supportsManualEntry";
     String PRINTS_RECEIPTS = "printsReceipts";
