@@ -19,6 +19,7 @@ package com.aevi.sdk.flow.constants;
  */
 public interface AdditionalDataKeys {
 
+    String DATA_KEY_TRANSACTION = "transaction";
     String DATA_KEY_TRANSACTION_ID = "transactionId";
     String DATA_KEY_AMOUNT = "amount";
     String DATA_KEY_TOKEN = "token";
