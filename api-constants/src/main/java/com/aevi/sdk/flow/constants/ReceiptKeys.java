@@ -22,7 +22,7 @@ public interface ReceiptKeys {
     String RECEIPT_PAYMENT_METHOD = "receiptPaymentMethod";
     String RECEIPT_AMOUNTS = "receiptAmounts";
     String RECEIPT_OUTCOME = "receiptOutcome";
+    String RECEIPT_BASKET = "basket";
 
-    String RECEIPT_DATA = "receiptData";
-
+    String TRANSACTION = "transaction";
 }

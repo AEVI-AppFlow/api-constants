@@ -29,6 +29,5 @@ public interface FlowTypes {
     String FLOW_TYPE_REVERSAL = "reversal";
     String FLOW_TYPE_TOKENISATION = "tokenisation";
     String FLOW_TYPE_BATCH_CLOSURE = "batchClosure";
-    String FLOW_TYPE_CASH_RECEIPT_DELIVERY = "cashReceiptDelivery";
-    String FLOW_TYPE_RECEIPT_REDELIVERY = "receiptRedelivery";
+    String FLOW_TYPE_RECEIPT_DELIVERY = "receiptDelivery";
 }
