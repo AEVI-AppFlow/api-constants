@@ -15,7 +15,9 @@
 package com.aevi.sdk.flow.constants;
 
 /**
- * Flow types, used to define flow configurations and to initiate flows with a given type.
+ * AEVI defined flow types, used to define flow configurations and to initiate flows with a given type.
+ *
+ * Note that any acquirer/application specific types, or custom request types, are not covered here.
  */
 public interface FlowTypes {
 
@@ -32,4 +34,20 @@ public interface FlowTypes {
     String FLOW_TYPE_RECEIPT_DELIVERY = "receiptDelivery";
     String FLOW_TYPE_BASKET_STATUS_UPDATE = "basketStatusUpdate";
     String FLOW_TYPE_CUSTOMER_STATUS_UPDATE = "customerStatusUpdate";
+
+    String[] ALL_FLOW_TYPES = new String[]{
+            FLOW_TYPE_SALE,
+            FLOW_TYPE_REFUND,
+            FLOW_TYPE_MOTO_SALE,
+            FLOW_TYPE_MOTO_REFUND,
+            FLOW_TYPE_PRE_AUTHORISATION,
+            FLOW_TYPE_PRE_AUTH_COMPLETION,
+            FLOW_TYPE_DEPOSIT,
+            FLOW_TYPE_REVERSAL,
+            FLOW_TYPE_TOKENISATION,
+            FLOW_TYPE_BATCH_CLOSURE,
+            FLOW_TYPE_RECEIPT_DELIVERY,
+            FLOW_TYPE_BASKET_STATUS_UPDATE,
+            FLOW_TYPE_CUSTOMER_STATUS_UPDATE
+    };
 }

@@ -24,7 +24,7 @@ public interface AugmentedDataKeys {
     String AUGMENTED_DATA_CUSTOMER = "customer";
     String AUGMENTED_DATA_CURRENCY = "currency";
     String AUGMENTED_DATA_ADDITIONAL_DATA = "additionalData";
-    String AUGMENTED_DATA_SPLIT = "split";
+    String AUGMENTED_DATA_PAYMENT = "payment";
     String AUGMENTED_DATA_CANCELLED = "cancelled";
     String AUGMENTED_DATA_REFERENCES = "references";
 }

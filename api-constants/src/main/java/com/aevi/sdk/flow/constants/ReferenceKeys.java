@@ -15,7 +15,7 @@
 package com.aevi.sdk.flow.constants;
 
 /**
- *
+ * Keys for reference data being passed back in responses
  */
 public interface ReferenceKeys {
 

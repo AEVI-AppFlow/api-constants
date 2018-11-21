@@ -25,12 +25,7 @@ public interface EventDataKeys {
      * Flow services have changed, meaning apps should re-query for available flow services.
      */
     String EVENT_KEY_FLOW_SERVICES_CHANGED = "eventKeyFlowServicesChanged";
-    /**
-     * For {@link EventTypes#EVENT_EXTERNAL_STATE_CHANGED} event.
-     *
-     * Payment services have changed, meaning apps should re-query for available flow services.
-     */
-    String EVENT_KEY_PAYMENT_SERVICES_CHANGED = "eventKeyPaymentServicesChanged";
+
     /**
      * For {@link EventTypes#EVENT_EXTERNAL_STATE_CHANGED} event.
      *
