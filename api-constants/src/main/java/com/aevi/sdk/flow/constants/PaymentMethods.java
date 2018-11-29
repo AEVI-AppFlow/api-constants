@@ -24,8 +24,7 @@ public interface PaymentMethods {
     String PAYMENT_METHOD_LOYALTY_POINTS = "points";
     String PAYMENT_METHOD_REWARD = "reward";
     String PAYMENT_METHOD_GIFT_CARD = "giftCard";
-    String PAYMENT_METHOD_BANK_TRANSFER = "bankTransfer";
+    String PAYMENT_METHOD_BANK_ACCOUNT = "bankAccount";
     String PAYMENT_METHOD_CHEQUE = "cheque";
     String PAYMENT_METHOD_EBT = "ebt";
-    String PAYMENT_METHOD_GIFT = "gift";
 }
