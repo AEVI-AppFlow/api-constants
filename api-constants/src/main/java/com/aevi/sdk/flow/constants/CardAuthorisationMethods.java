@@ -15,16 +15,12 @@
 package com.aevi.sdk.flow.constants;
 
 /**
- * Keys for additional information about cards.
+ * Authorization methods for cards.
  */
-public interface CardDataKeys {
+public interface CardAuthorisationMethods {
 
-    String CARD_DATA_NETWORK = "network";
-    String CARD_DATA_ENTRY_METHOD = "entryMethod";
-    String CARD_DATA_AUTHORISATION_METHOD = "authorisationMethod";
-    String CARD_DATA_ACCOUNT_TYPE = "accountType";
-    String CARD_DATA_AID = "aid";
-    String CARD_DATA_SERVICE_CODE = "serviceCode";
-    String CARD_DATA_CVV = "cvv";
-    String CARD_DATA_LANGUAGES = "languages";
+    String CARD_AUTH_METHOD_PIN = "pin";
+    String CARD_AUTH_METHOD_SIGNATURE = "signature";
+    String CARD_AUTH_METHOD_FINGERPRINT = "fingerprint";
+    String CARD_AUTH_METHOD_RETINAL_SCAN = "rentinalScan";
 }

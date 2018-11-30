@@ -19,11 +19,24 @@ package com.aevi.sdk.flow.constants;
  */
 public interface ReferenceKeys {
 
-    String MERCHANT_ID = "merchantId";
-    String MERCHANT_NAME = "merchantName";
-    String TERMINAL_ID = "terminalId";
-    String TRANSACTION_DATE_TIME = "transactionDateTime"; // ms since epoch
+    String REFERENCE_KEY_MERCHANT_ID = "merchantId";
+    String REFERENCE_KEY_MERCHANT_NAME = "merchantName";
+    String REFERENCE_KEY_TERMINAL_ID = "terminalId";
 
-    String PAYMENT_SERVICE = "paymentService";
+    /**
+     * ms since epoch
+     *
+     * The value of this parameter is usually provided as a long encoded to a String type
+     */
+    String REFERENCE_KEY_TRANSACTION_DATE_TIME = "transactionDateTime"; // ms since epoch
+
+    /**
+     * For terminals that provide a transaction number representing the count of transactions performed on a terminal so far.
+     *
+     * <strong>This is not the same as transactionId</strong>
+     */
+    String REFERENCE_KEY_TRANSACTION_NUMBER = "transactionNumber";
+
+    String REFERENCE_KEY_PAYMENT_SERVICE = "paymentService";
 
 }

@@ -26,4 +26,9 @@ public interface AdditionalDataKeys {
     String DATA_KEY_TRANSACTION_LANGUAGE = "transactionLanguage";
     String DATA_KEY_ACCESSIBLE_MODE = "accessibleMode";
 
+    /**
+     * This key should be added to the additional data of a request if post auth tip adjustment is allowed
+     */
+    String DATA_KEY_POST_AUTH_TIP_ADJUST = "postAuthTipAdjust";
+
 }

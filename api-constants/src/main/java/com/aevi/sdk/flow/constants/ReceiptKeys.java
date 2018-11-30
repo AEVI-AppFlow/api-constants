@@ -24,4 +24,25 @@ public interface ReceiptKeys {
     String RECEIPT_OUTCOME = "receiptOutcome";
     String RECEIPT_BASKET = "receiptBasket";
 
+    String RECEIPT_TERMINAL_PARAMS = "receiptTerminalParams";
+    String RECEIPT_CARD_EXTRAS = "receiptCardExtras";
+    String RECEIPT_TRANSACTION_EXTRAS = "receiptTransactionExtras";
+    String RECEIPT_FLOW_EXTRAS = "receiptFlowExtras";
+
+    String RECEIPT_LABEL_TOTAL = "receiptLabelTotal";
+    String RECEIPT_LABEL_BASKET_SUBTOTAL = "receiptLabelBasketSubtotal";
+
+    String RECEIPT_LABEL_PAN = "pan";
+    String RECEIPT_LABEL_EXPIRY = "expiry";
+    String RECEIPT_LABEL_DATE = "date";
+    String RECEIPT_LABEL_STATUS = "status";
+    String RECEIPT_LABEL_AUTH_CODE = "authCode";
+    String RECEIPT_LABEL_TYPE = "type";
+    String RECEIPT_LABEL_REFERENCE = "reference";
+    String RECEIPT_LABEL_TIP_ADJUST = "tipAdjust";
+    String RECEIPT_LABEL_TIP_ADJUST_TOTAL = "tipAdjustTotal";
+    String RECEIPT_LABEL_VERIFIED_BY_PIN = "verifiedByPin";
+    String RECEIPT_LABEL_VERIFIED_BY_SIGNATURE = "verifiedBySignature";
+    String RECEIPT_LABEL_SIGNATUE = "signature";
+    String RECEIPT_LABEL_PLEASE_SIGN = "pleaseSign";
 }
