@@ -26,7 +26,7 @@ public interface ReferenceKeys {
     /**
      * ms since epoch
      *
-     * The value of this parameter is usually provided as a long encoded to a String type
+     * The value of this parameter should be provided as a long
      */
     String REFERENCE_KEY_TRANSACTION_DATE_TIME = "transactionDateTime"; // ms since epoch
 
