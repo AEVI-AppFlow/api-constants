@@ -13,6 +13,13 @@ public interface PaymentDataKeys {
      */
     String CARD_ENTRY_METHODS = "cardEntryMethods";
 
+
+    /**
+     * See {@link PaymentMethods} for possible values.
+     * Should be passed as String[].
+     */
+    String CARD_PAYMENT_METHODS = "paymentMethods";
+
     /**
      * Also known as card schemes.
      * See {@link CardNetworks} for possible values.
