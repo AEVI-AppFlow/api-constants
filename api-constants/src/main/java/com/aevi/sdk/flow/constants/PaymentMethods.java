@@ -20,6 +20,9 @@ package com.aevi.sdk.flow.constants;
 public interface PaymentMethods {
 
     String PAYMENT_METHOD_CARD = "card";
+    String PAYMENT_METHOD_CREDIT_CARD = "creditCard";
+    String PAYMENT_METHOD_DEBIT_CARD = "debitCard";
+    String PAYMENT_METHOD_CHARGE_CARD = "chargeCard";
     String PAYMENT_METHOD_CASH = "cash";
     String PAYMENT_METHOD_LOYALTY_POINTS = "points";
     String PAYMENT_METHOD_REWARD = "reward";
