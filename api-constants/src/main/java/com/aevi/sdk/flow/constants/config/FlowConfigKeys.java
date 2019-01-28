@@ -22,4 +22,5 @@ public interface FlowConfigKeys {
     String FPS_CONFIG_KEY_FLOW_CONFIGS = "flowConfigs";
     String FPS_CONFIG_KEY_STYLES = "styleConfig";
     String FPS_CONFIG_KEY_SETTINGS = "fpsSettings";
+    String APPFLOW_CONFIG_KEY_SETTINGS = "appflowSettings";
 }
