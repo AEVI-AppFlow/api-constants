@@ -1,37 +1,7 @@
 apply plugin: 'com.jfrog.bintray'
 
-def siteUrl = 'https://github.com/Aevi-UK/pos-flow-sdk-constants'
-def gitUrl = 'https://github.com/Aevi-UK/pos-flow-sdk-constants.git'
-
-// Create the pom configuration:
-def pomConfig = {
-    name 'POSFlowSDKConstants'
-    url siteUrl
-    licenses {
-        license {
-            name 'The Apache Software License, Version 2.0'
-            url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-        }
-    }
-    developers {
-        developer {
-            id 'brettwold'
-            name 'Brett Cherrington'
-            email 'brett@annalytics.co.uk'
-        }
-        developer {
-            id 'andreas-borglin'
-            name 'Andreas Borglin'
-            email 'andreas@jakoon.co.uk'
-        }
-    }
-    scm {
-        connection gitUrl
-        developerConnection gitUrl
-        url siteUrl
-    }
-}
-
+def siteUrl = 'https://github.com/AEVI-AppFlow/api-constants'
+def gitUrl = 'https://github.com/AEVI-AppFlow/api-constants.git'
 
 bintray {
     if (project.hasProperty('bintrayUser') && project.hasProperty('bintrayKey')) {
@@ -45,12 +15,12 @@ bintray {
         dryRun = false
         publish = true
         repo = 'aevi-uk'
-        name = 'pos-flow-sdk-constants'
+        name = 'appflow-sdk-constants'
         userOrg = 'aevi'
         licenses = ['Apache-2.0']
         labels = ['payment', 'POS', 'flow', 'android']
         websiteUrl = siteUrl
-        issueTrackerUrl = 'https://github.com/Aevi-UK/pos-flow-sdk-constants/issues'
+        issueTrackerUrl = 'https://github.com/AEVI-AppFlow/api-constants/issues'
         vcsUrl = gitUrl
         publicDownloadNumbers = true
     }
