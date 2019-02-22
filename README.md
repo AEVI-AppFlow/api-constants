@@ -8,7 +8,7 @@ feel free to raise a pull request for it. If you have questions, please contact 
 Refer to https://github.com/AEVI-AppFlow/pos-android-sdk/wiki for documentation around these constants.
 This library is purely a convenience in addition to the relevant documentation.
 
-[ ![Download](https://api.bintray.com/packages/aevi/aevi-uk/pos-flow-sdk-constants/images/download.svg) ](https://bintray.com/aevi/aevi-uk/pos-flow-sdk-constants/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/aevi/aevi-uk/appflow-sdk-constants/images/download.svg) ](https://bintray.com/aevi/aevi-uk/appflow-sdk-constants/_latestVersion)
 
 To include as a dependency,
 `implementation 'com.aevi.sdk.flow:api-constants:<version>'`
