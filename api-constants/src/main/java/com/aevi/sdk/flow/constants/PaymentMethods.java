@@ -30,4 +30,5 @@ public interface PaymentMethods {
     String PAYMENT_METHOD_BANK_ACCOUNT = "bankAccount";
     String PAYMENT_METHOD_CHEQUE = "cheque";
     String PAYMENT_METHOD_EBT = "ebt";
+    String PAYMENT_METHOD_INVOICE = "invoice";
 }
