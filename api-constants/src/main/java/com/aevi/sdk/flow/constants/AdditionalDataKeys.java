@@ -21,7 +21,10 @@ public interface AdditionalDataKeys {
 
     String DATA_KEY_TRANSACTION = "transaction";
     String DATA_KEY_TRANSACTION_ID = "transactionId";
+    String DATA_KEY_AMOUNTS = "amounts";
     String DATA_KEY_AMOUNT = "amount";
+    String DATA_KEY_BASKET = "basket";
+    String DATA_KEY_CUSTOMER = "customer";
     String DATA_KEY_TOKEN = "token";
     String DATA_KEY_TRANSACTION_LANGUAGE = "transactionLanguage";
     String DATA_KEY_ACCESSIBLE_MODE = "accessibleMode";
@@ -30,5 +33,4 @@ public interface AdditionalDataKeys {
      * This key should be added to the additional data of a request if post auth tip adjustment is allowed
      */
     String DATA_KEY_POST_AUTH_TIP_ADJUST = "postAuthTipAdjust";
-
 }
