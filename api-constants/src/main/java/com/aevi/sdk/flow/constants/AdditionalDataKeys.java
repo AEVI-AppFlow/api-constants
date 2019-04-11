@@ -28,6 +28,7 @@ public interface AdditionalDataKeys {
     String DATA_KEY_TOKEN = "token";
     String DATA_KEY_TRANSACTION_LANGUAGE = "transactionLanguage";
     String DATA_KEY_ACCESSIBLE_MODE = "accessibleMode";
+    String DATA_KEY_TAX_INFO = "taxInfo";
 
     /**
      * This key should be added to the additional data of a request if post auth tip adjustment is allowed
