@@ -21,7 +21,6 @@ import java.util.List;
 /**
  * A utility class specifically to deal with combined receipt printing data that may be passed between applications.
  *
- * This class helps with legacy support for the AEVI V2 simple payment API i.e. request classes that extend the class com.aevi.payment.AeviRequest.
  */
 public class CombinedReceiptData {
 
@@ -46,7 +45,7 @@ public class CombinedReceiptData {
     }
 
     /**
-     * Returns all the payloads that were setup in the original AeviRequest send via the V2 simple payment API
+     * Returns all the payloads for this receipt data
      *
      * @return List of {@link ReceiptPayload} objects
      */
@@ -55,11 +54,10 @@ public class CombinedReceiptData {
     }
 
     /**
-     * Each print payload from the V2 SDK is mapped to a single instance of this class
+     * Each print payload is mapped to a single instance of this class
      *
      * The position, receiptType and paymentStatus can be used to determine which receipt to use the printData for and where the data corresponds to
      *
-     * These are mapped directly from there corresponding V2 com.aevi.payment.AeviRequest equivalents for assistance with legacy support
      */
     public static class ReceiptPayload {
 
