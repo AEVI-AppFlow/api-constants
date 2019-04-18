@@ -25,17 +25,19 @@ import java.util.List;
  */
 public class CombinedReceiptData {
 
-    static final String POSITION_BASKET = "BASKET";
-    static final String POSITION_HEADER = "HEADER";
-    static final String POSITION_FOOTER = "FOOTER";
+    public static final String DATA_KEY_COMBINED_RECEIPT = "combinedReceiptData";
 
-    static final String RECEIPT_TYPE_ALL = "ALL";
-    static final String RECEIPT_TYPE_CUSTOMER = "CUSTOMER";
-    static final String RECEIPT_TYPE_MERCHANT = "MERCHANT";
+    public static final String POSITION_BASKET = "BASKET";
+    public static final String POSITION_HEADER = "HEADER";
+    public static final String POSITION_FOOTER = "FOOTER";
 
-    static final String PAYMENT_STATUS_ALL = "ALL";
-    static final String PAYMENT_STATUS_SUCCESS = "SUCCESS";
-    static final String PAYMENT_STATUS_FAILURE = "FAILURE";
+    public static final String RECEIPT_TYPE_ALL = "ALL";
+    public static final String RECEIPT_TYPE_CUSTOMER = "CUSTOMER";
+    public static final String RECEIPT_TYPE_MERCHANT = "MERCHANT";
+
+    public static final String PAYMENT_STATUS_ALL = "ALL";
+    public static final String PAYMENT_STATUS_SUCCESS = "SUCCESS";
+    public static final String PAYMENT_STATUS_FAILURE = "FAILURE";
 
     private List<ReceiptPayload> payloadList = new ArrayList<>();
 
@@ -48,7 +50,7 @@ public class CombinedReceiptData {
      *
      * @return List of {@link ReceiptPayload} objects
      */
-    List<ReceiptPayload> getPayloadList() {
+    public List<ReceiptPayload> getPayloadList() {
         return payloadList;
     }
 
@@ -76,28 +78,28 @@ public class CombinedReceiptData {
         /**
          * @return The receipt type this print payload should be used for e.g. CUSTOMER or MERCHANT
          */
-        String getReceiptType() {
+        public String getReceiptType() {
             return receiptType;
         }
 
         /**
          * @return The payment status this print payload should be used for e.g. SUCCESS or FAILURE
          */
-        String getPaymentStatus() {
+        public String getPaymentStatus() {
             return paymentStatus;
         }
 
         /**
          * @return The position this print payload should appear in e.g. BASKET, HEADER or FOOTER
          */
-        String getPosition() {
+        public String getPosition() {
             return position;
         }
 
         /**
          * @return The print payload in JSON format use the AEVI print-api to deserialize
          */
-        String getPrintData() {
+        public String getPrintData() {
             return printData;
         }
     }
