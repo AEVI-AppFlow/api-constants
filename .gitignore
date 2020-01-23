@@ -1,11 +1,15 @@
 *.iml
+*.prefs
 .gradle
+.classpath
+.project
 /local.properties
 /.idea
 /.idea/workspace.xml
 /.idea/libraries
 .DS_Store
 /build
+/bin
 /captures
 .externalNativeBuild
 documentation
