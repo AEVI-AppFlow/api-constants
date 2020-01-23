@@ -27,4 +27,5 @@ public interface CardDataKeys {
     String CARD_DATA_SERVICE_CODE = "serviceCode";
     String CARD_DATA_CVV = "cvv";
     String CARD_DATA_LANGUAGES = "languages";
+    String CARD_DATA_BALANCE = "balance";
 }
