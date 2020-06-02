@@ -30,7 +30,14 @@ public interface AdditionalDataKeys {
     String DATA_KEY_ACCESSIBLE_MODE = "accessibleMode";
     String DATA_KEY_TAX_INFO = "taxInfo";
     String DATA_KEY_CARD = "card";
-    String DATA_KEY_CURRENCY= "currency";
+    String DATA_KEY_CURRENCY = "currency";
+
+    /**
+     * This key can be added to a Payment object if the amount set is provisional and will be confirmed
+     * later. This can be used for QuickChip scenarios where the amount is finalised in an event sent
+     * after the initial Payment information.
+     */
+    String DATA_KEY_PROVISIONAL_AMOUNT = "provisionalAmount";
 
     /**
      * This key should be added to the additional data of a request if post auth tip adjustment is allowed
