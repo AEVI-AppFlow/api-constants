@@ -31,6 +31,8 @@ public interface AdditionalDataKeys {
     String DATA_KEY_TAX_INFO = "taxInfo";
     String DATA_KEY_CARD = "card";
     String DATA_KEY_CURRENCY = "currency";
+    String DATA_KEY_ORDER_CODE = "orderCode";
+    String DATA_KEY_VIRTUAL_ID = "virtualId";
 
     /**
      * This key can be added to a Payment object if the amount set is provisional and will be confirmed

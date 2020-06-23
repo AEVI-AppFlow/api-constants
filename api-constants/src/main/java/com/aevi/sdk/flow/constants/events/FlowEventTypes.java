@@ -8,5 +8,4 @@ public interface FlowEventTypes {
     String EVENT_NOTIFY_ACTION = "notifyAction";
     String EVENT_PROGRESS_MESSAGE = "progressMessage";
     String EVENT_RECEIPT = "receipt";
-    String EVENT_TRANSACTION_PROGRESS = "transactionProgress";
 }

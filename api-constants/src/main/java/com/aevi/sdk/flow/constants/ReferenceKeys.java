@@ -22,6 +22,7 @@ public interface ReferenceKeys {
     String REFERENCE_KEY_MERCHANT_ID = "merchantId";
     String REFERENCE_KEY_MERCHANT_NAME = "merchantName";
     String REFERENCE_KEY_TERMINAL_ID = "terminalId";
+    String REFERENCE_KEY_DEVICE_ID = "deviceId";
 
     /**
      * ms since epoch
@@ -38,5 +39,14 @@ public interface ReferenceKeys {
     String REFERENCE_KEY_TRANSACTION_NUMBER = "transactionNumber";
 
     String REFERENCE_KEY_PAYMENT_SERVICE = "paymentService";
+
+    String REFERENCE_KEY_TRACK_1 = "track1";
+    String REFERENCE_KEY_TRACK_2 = "track2";
+    String REFERENCE_KEY_TRACK_3 = "track3";
+
+    String REFERENCE_ONLINE = "online";
+
+    String REFERENCE_BATCH_NUMBER = "batchNumber";
+
 
 }
