@@ -7,6 +7,9 @@ public interface PaymentDataKeys {
 
     String DATA_KEY_MERCHANT_ID = "merchantId";
 
+    String DATA_KEY_MERCHANT_REFERENCE = "merchantReference";
+    String DATA_KEY_MERCHANT_SECOND_REFERENCE = "merchantSecondReference";
+
     /**
      * See {@link CardEntryMethods} for possible values.
      * Should be passed as a String[].
