@@ -28,4 +28,5 @@ public interface CardDataKeys {
     String CARD_DATA_CVV = "cvv";
     String CARD_DATA_LANGUAGES = "languages";
     String CARD_DATA_BALANCE = "balance";
+    String CARD_DATA_BRAND = "brand";
 }
