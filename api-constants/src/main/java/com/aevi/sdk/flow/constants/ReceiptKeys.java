@@ -23,4 +23,14 @@ public interface ReceiptKeys {
     String RECEIPT_AMOUNTS = "receiptAmounts";
     String RECEIPT_OUTCOME = "receiptOutcome";
     String RECEIPT_BASKET = "receiptBasket";
+
+    /**
+     * Key for holding receipt data for a customer
+     */
+    String RECEIPT_CUSTOMER = "customerReceipt";
+
+    /**
+     * Key for holding receipt data for a merchant
+     */
+    String RECEIPT_MERCHANT = "merchantReceipt";
 }
