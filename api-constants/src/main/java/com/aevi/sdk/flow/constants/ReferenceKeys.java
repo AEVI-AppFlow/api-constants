@@ -47,10 +47,10 @@ public interface ReferenceKeys {
     /**
      * Some commonly used acquirer keys
      */
-    String REFERENCE_ONLINE = "online";
-    String REFERENCE_BATCH_NUMBER = "batchNumber";
-    String STAN = "stan";
-    String ACQUIRER_RESPONSE_CODE = "acquirerResponseCode";
+    String REFERENCE_KEY_ONLINE = "online";
+    String REFERENCE_KEY_BATCH_NUMBER = "batchNumber";
+    String REFERENCE_KEY_STAN = "stan";
+    String REFERENCE_KEY_ACQUIRER_RESPONSE_CODE = "acquirerResponseCode";
 
 
 }
