@@ -33,4 +33,9 @@ public interface ReceiptKeys {
      * Key for holding receipt data for a merchant
      */
     String RECEIPT_MERCHANT = "merchantReceipt";
+
+    /**
+     * Key used to declare what obfuscation method should be used for receipts (if any)
+     */
+    String RECEIPT_OBFUSCATION_METHOD = "receiptObfuscationMethod";
 }
