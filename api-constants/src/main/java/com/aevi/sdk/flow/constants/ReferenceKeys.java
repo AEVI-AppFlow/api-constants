@@ -44,9 +44,13 @@ public interface ReferenceKeys {
     String REFERENCE_KEY_TRACK_2 = "track2";
     String REFERENCE_KEY_TRACK_3 = "track3";
 
+    /**
+     * Some commonly used acquirer keys
+     */
     String REFERENCE_ONLINE = "online";
-
     String REFERENCE_BATCH_NUMBER = "batchNumber";
+    String STAN = "stan";
+    String ACQUIRER_RESPONSE_CODE = "acquirerResponseCode";
 
 
 }
