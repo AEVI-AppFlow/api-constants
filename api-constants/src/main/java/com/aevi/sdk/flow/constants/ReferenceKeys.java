@@ -47,6 +47,7 @@ public interface ReferenceKeys {
     /**
      * Some commonly used acquirer keys
      */
+    String REFERENCE_KEY_AUTH_CODE = "authCode";
     String REFERENCE_KEY_ONLINE = "online";
     String REFERENCE_KEY_BATCH_NUMBER = "batchNumber";
     String REFERENCE_KEY_STAN = "stan";
