@@ -46,4 +46,9 @@ public interface AdditionalDataKeys {
      * This key should be added to the additional data of a request if post auth tip adjustment is allowed
      */
     String DATA_KEY_POST_AUTH_TIP_ADJUST = "postAuthTipAdjust";
+
+    /**
+     * A key that can hold a payment settings object if this data is requested via a request
+     */
+    String DATA_KEY_PAYMENT_SETTINGS = "paymentSettings";
 }

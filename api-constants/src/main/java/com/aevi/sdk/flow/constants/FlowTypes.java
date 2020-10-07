@@ -34,6 +34,7 @@ public interface FlowTypes {
     String FLOW_TYPE_RECEIPT_DELIVERY = "receiptDelivery";
     String FLOW_TYPE_BASKET_STATUS_UPDATE = "basketStatusUpdate";
     String FLOW_TYPE_CUSTOMER_STATUS_UPDATE = "customerStatusUpdate";
+    String FLOW_TYPE_DEVICE_SETTINGS = "deviceSettings";
 
     String[] ALL_FLOW_TYPES = new String[]{
             FLOW_TYPE_SALE,
@@ -48,6 +49,7 @@ public interface FlowTypes {
             FLOW_TYPE_BATCH_CLOSURE,
             FLOW_TYPE_RECEIPT_DELIVERY,
             FLOW_TYPE_BASKET_STATUS_UPDATE,
-            FLOW_TYPE_CUSTOMER_STATUS_UPDATE
+            FLOW_TYPE_CUSTOMER_STATUS_UPDATE,
+            FLOW_TYPE_DEVICE_SETTINGS
     };
 }
