@@ -1,7 +1,16 @@
 apply plugin: 'java-library'
 
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+apply from: '../gradle/scripts/lib/versioning.gradle'
+
 group = 'com.aevi.sdk.flow'
-version = "${apiVersion}"
+version = libraryVersion
+
+apply from: '../gradle/scripts/lib/publishing-repos.gradle'
+apply from: '../gradle/scripts/lib/jar-publisher.gradle'
+apply from: '../gradle/scripts/lib/bintray.gradle'
 
 javadoc {
     enabled = false
@@ -10,9 +19,3 @@ javadoc {
 dependencies {
     implementation 'com.android.support:support-annotations:28.0.0'
 }
-
-apply from: '../jar-publisher.gradle'
-apply from: '../bintray.gradle'
-
-sourceCompatibility = "1.8"
-targetCompatibility = "1.8"

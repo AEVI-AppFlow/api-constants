@@ -8,7 +8,7 @@ bintray {
         user = project.bintrayUser
         key = project.bintrayKey
     }
-    publications = ['apiJar']
+    publications = ['jar']
     override = true
 
     pkg {

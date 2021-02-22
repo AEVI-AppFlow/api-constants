@@ -13,8 +13,8 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 
 publishing {
     publications {
-        apiJar(MavenPublication) {
-            version = rootProject.apiVersion
+        jar(MavenPublication) {
+            version = project.version
             artifactId = project.name
             groupId = project.group
             from components.java
