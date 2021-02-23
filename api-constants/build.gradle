@@ -10,7 +10,6 @@ version = libraryVersion
 
 apply from: '../gradle/scripts/lib/publishing-repos.gradle'
 apply from: '../gradle/scripts/lib/jar-publisher.gradle'
-apply from: '../gradle/scripts/lib/bintray.gradle'
 
 javadoc {
     enabled = false

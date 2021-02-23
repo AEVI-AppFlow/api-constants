@@ -56,13 +56,15 @@ jobs:
           -Ptag_version_minor=${{env.VERSION_MINOR}} \
           -Ptag_version_patch=${{env.VERSION_PATCH}} \
 
-      - name: Build and upload library jar to maven repo
+      - name: Build and deploy jar to Github packages
         run: |
-          ./gradlew ${{env.LIBRARY_MODULE}}:jar ${{env.LIBRARY_MODULE}}:bintrayUpload \
+          ./gradlew ${{env.LIBRARY_MODULE}}:jar ${{env.LIBRARY_MODULE}}:publishJarPublicationToGitHubPackagesRepository \
           -Pversion_major=${{env.VERSION_MAJOR}} \
           -Pversion_minor=${{env.VERSION_MINOR}} \
           -Pversion_patch=${{env.VERSION_PATCH}} \
           -Pversion_suffix=${{env.VERSION_SUFFIX}} \
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create github release and upload libs
         id: create-release
