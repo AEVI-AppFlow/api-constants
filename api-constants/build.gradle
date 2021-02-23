@@ -3,13 +3,14 @@ apply plugin: 'java-library'
 sourceCompatibility = "1.8"
 targetCompatibility = "1.8"
 
-apply from: '../gradle/scripts/lib/versioning.gradle'
+apply from: gradleScript('lib/versioning.gradle')
+apply from: gradleScript('android/publishing-utils.gradle')
 
-group = 'com.aevi.sdk.flow'
-version = libraryVersion
-
-apply from: '../gradle/scripts/lib/publishing-repos.gradle'
-apply from: '../gradle/scripts/lib/jar-publisher.gradle'
+publishingUtils?.publication {
+    groupId 'com.aevi.sdk.flow'
+    artifactId project.name
+    version libraryVersion
+}
 
 javadoc {
     enabled = false

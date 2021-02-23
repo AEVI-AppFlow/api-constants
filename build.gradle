@@ -1,2 +1,22 @@
-apply from: 'gradle/scripts/root/common-tasks.gradle'
-apply from: 'gradle/scripts/root/repositories.gradle'
+buildscript {
+    repositories {
+        maven {
+            name = "github-aevi-uk"
+            url = uri("https://maven.pkg.github.com/aevi-uk/gradle-scripts")
+            credentials {
+                username = System.getenv("GH_PACKAGES_USERNAME") ?: gh_username
+                password = System.getenv("GH_PACKAGES_TOKEN") ?: gh_token
+            }
+        }
+    }
+    dependencies {
+        classpath 'com.aevi.sdk.build:gradle-scripts:1.0.6'
+    }
+}
+
+ext.gradleScript = { path ->
+    return rootProject.buildscript.classLoader.getResource(path).toURI()
+}
+
+apply from: gradleScript('root/common-tasks.gradle')
+apply from: gradleScript('root/repositories.gradle')

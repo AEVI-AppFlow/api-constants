@@ -2,6 +2,8 @@ name: Release library from tag
 
 env:
   LIBRARY_MODULE: api-constants
+  GITHUB_ACTOR: ${{ secrets.CI_BOT_USERNAME }}
+  GITHUB_TOKEN: ${{ secrets.CI_BOT_PAT }}
 
 on:
   push:
@@ -58,7 +60,7 @@ jobs:
 
       - name: Build and deploy jar to Github packages
         run: |
-          ./gradlew ${{env.LIBRARY_MODULE}}:jar ${{env.LIBRARY_MODULE}}:publishJarPublicationToGitHubPackagesRepository \
+          ./gradlew ${{env.LIBRARY_MODULE}}:jar ${{env.LIBRARY_MODULE}}:publishJavaPublicationToGithubRepository \
           -Pversion_major=${{env.VERSION_MAJOR}} \
           -Pversion_minor=${{env.VERSION_MINOR}} \
           -Pversion_patch=${{env.VERSION_PATCH}} \
