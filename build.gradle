@@ -10,7 +10,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.aevi.sdk.build:gradle-scripts:1.0.7'
+        classpath 'com.aevi.sdk.build:gradle-scripts:1.0.8'
     }
 }
 
