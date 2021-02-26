@@ -1,7 +1,16 @@
 apply plugin: 'java-library'
 
-group = 'com.aevi.sdk.flow'
-version = "${apiVersion}"
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+apply from: gradleScript('lib/versioning.gradle')
+apply from: gradleScript('android/publishing-utils.gradle')
+
+publishingUtils?.publication {
+    groupId 'com.aevi.sdk.flow'
+    artifactId project.name
+    version libraryVersion
+}
 
 javadoc {
     enabled = false
@@ -10,9 +19,3 @@ javadoc {
 dependencies {
     implementation 'com.android.support:support-annotations:28.0.0'
 }
-
-apply from: '../jar-publisher.gradle'
-apply from: '../bintray.gradle'
-
-sourceCompatibility = "1.8"
-targetCompatibility = "1.8"

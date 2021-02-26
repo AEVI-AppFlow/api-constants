@@ -1,23 +1,22 @@
-version = "2.3.6"
-
 buildscript {
     repositories {
-        jcenter()
+        maven {
+            name = "github-aevi-uk"
+            url = uri("https://maven.pkg.github.com/aevi-uk/gradle-scripts")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR") ?: gh_username
+                password = System.getenv("GITHUB_TOKEN") ?: gh_token
+            }
+        }
     }
     dependencies {
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.1'
+        classpath 'com.aevi.sdk.build:gradle-scripts:1.0.8'
     }
 }
 
-allprojects {
-
-    project.ext {
-        apiVersion = rootProject.version
-    }
-
-    repositories {
-        google()
-        jcenter()
-        mavenCentral()
-    }
+ext.gradleScript = { path ->
+    return rootProject.buildscript.classLoader.getResource(path).toURI()
 }
+
+apply from: gradleScript('root/common-tasks.gradle')
+apply from: gradleScript('root/repositories.gradle')
