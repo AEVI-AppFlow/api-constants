@@ -54,30 +54,13 @@ jobs:
       - name: Log info
         run: echo "Version is $VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH$VERSION_SUFFIX"
 
-      - name: Verify that tag major.minor.patch from tag matches what is in gradle.properties
-        run: |
-          ./gradlew verifyTagVersionMatchesGradleProperties \
-          -Ptag_version_major=${{env.VERSION_MAJOR}} \
-          -Ptag_version_minor=${{env.VERSION_MINOR}} \
-          -Ptag_version_patch=${{env.VERSION_PATCH}} \
-
-      - name: Build and deploy jar to Github packages
-        run: |
-          ./gradlew ${{env.LIBRARY_MODULE}}:jar ${{env.LIBRARY_MODULE}}:publishJavaPublicationToGithubRepository \
-          -Pversion_major=${{env.VERSION_MAJOR}} \
-          -Pversion_minor=${{env.VERSION_MINOR}} \
-          -Pversion_patch=${{env.VERSION_PATCH}} \
-          -Pversion_suffix=${{env.VERSION_SUFFIX}} \
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Publish final release versions to Maven Central
         if: contains(env.TAG, '-') != true
         run: |
           ./gradlew ${{env.LIBRARY_MODULE}}:jar publishToSonatype closeAndReleaseSonatypeStagingRepository \
-          -Pversion_major=${{env.VERSION_MAJOR}} \
-          -Pversion_minor=${{env.VERSION_MINOR}} \
-          -Pversion_patch=${{env.VERSION_PATCH}} \
+          -Pversion_major=2 \
+          -Pversion_minor=3 \
+          -Pversion_patch=7 \
           -Pversion_suffix=${{env.VERSION_SUFFIX}} \
           -Pversion_build_counter=${{env.VERSION_BUILD_NUMBER}} \
         env:
@@ -87,35 +70,3 @@ jobs:
           MVN_CENTRAL_PGP_PRIVATE_KEY: ${{ secrets.MVN_CENTRAL_PGP_PRIVATE_KEY }}
           MVN_CENTRAL_PGP_PASSWORD: ${{ secrets.MVN_CENTRAL_PGP_PASSWORD }}
           MVN_CENTRAL_STAGING_PROFILE_ID: ${{ secrets.MVN_CENTRAL_STAGING_PROFILE_ID }}
-
-      - name: Create github release and upload libs
-        id: create-release
-        uses: softprops/action-gh-release@v1
-        with:
-          name: Version ${{env.TAG}}
-          body: See [CHANGELOG](https://github.com/${{github.repository}}/blob/${{env.TAG}}/CHANGELOG.md) for release notes.
-          prerelease: ${{env.PRE_RELEASE}}
-          files: |
-            ${{ env.LIBRARY_MODULE }}/build/libs/*
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Increment app version patch and suffix if final version was released
-        if: contains(env.TAG, '-') != true
-        run: |
-          git checkout -- .
-          ./gradlew prepareForNextRelease \
-          -Pnew_version_patch=${{env.NEW_VERSION_PATCH}} \
-          -Pnew_version_suffix=-SNAPSHOT \
-          -Pnew_build_counter=1 \
-
-      - name: Create Pull Request to prepare for next release if final version was released
-        if: contains(env.TAG, '-') != true
-        uses: peter-evans/create-pull-request@v3
-        with:
-          commit-message: Prepare for next release
-          title: Prepare for next release
-          body: Prepare for next release
-          branch: feature/prepare-for-next-release-from-${{env.TAG}}
-          base: main
-          delete-branch: true
