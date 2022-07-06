@@ -1,5 +1,7 @@
 buildscript {
     repositories {
+        google()
+        maven { url 'https://plugins.gradle.org/m2/' }
         maven {
             name = "github-aevi-uk"
             url = uri("https://maven.pkg.github.com/aevi-uk/gradle-scripts")
@@ -10,9 +12,12 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.aevi.sdk.build:gradle-scripts:1.0.8'
+        classpath 'com.aevi.sdk.build:gradle-scripts:1.4.3'
+        classpath 'io.github.gradle-nexus:publish-plugin:1.1.0'
     }
 }
+
+apply plugin: 'io.github.gradle-nexus.publish-plugin'
 
 ext.gradleScript = { path ->
     return rootProject.buildscript.classLoader.getResource(path).toURI()
@@ -20,3 +25,4 @@ ext.gradleScript = { path ->
 
 apply from: gradleScript('root/common-tasks.gradle')
 apply from: gradleScript('root/repositories.gradle')
+apply from: gradleScript('publish/maven-central-repo.gradle')
