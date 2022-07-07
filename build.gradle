@@ -18,6 +18,13 @@ buildscript {
     }
 }
 
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
 apply plugin: 'io.github.gradle-nexus.publish-plugin'
 
 ext.gradleScript = { path ->
