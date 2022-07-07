@@ -60,7 +60,7 @@ jobs:
           ./gradlew ${{env.LIBRARY_MODULE}}:jar publishToSonatype closeAndReleaseSonatypeStagingRepository --stacktrace \
           -Pversion_major=2 \
           -Pversion_minor=3 \
-          -Pversion_patch=7 \
+          -Pversion_patch=6 \
           -Pversion_suffix=${{env.VERSION_SUFFIX}} \
           -Pversion_build_counter=${{env.VERSION_BUILD_NUMBER}} \
         env:
